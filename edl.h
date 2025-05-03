@@ -13,7 +13,7 @@ inline DLHandle edl_open_dl(const char *path) {
 
 #ifdef _WIN32
   handle = LoadLibrary(path);
-#elif unix
+#else
   handle = dlopen(path, RTLD_LAZY);
 #endif
 
